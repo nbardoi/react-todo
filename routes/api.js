@@ -3,7 +3,7 @@ const router = express.Router();
 const Todo = require('../models/todo');
 const path = require('path');
 
-router.use(function(req, res) {
+router.get("*",(req, res) => {
     res.sendFile(path.join(__dirname, "../client/build/index.html"));
   });
 
