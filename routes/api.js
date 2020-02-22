@@ -3,10 +3,6 @@ const router = express.Router();
 const Todo = require('../models/todo');
 const path = require('path');
 
-router.get("*",(req, res) => {
-    res.sendFile(path.join(__dirname, "../client/build/index.html"));
-  });
-
 router.get('/todos', (req, res, next) => {
 
   //this will return all the data, exposing only the id and action field to the client
